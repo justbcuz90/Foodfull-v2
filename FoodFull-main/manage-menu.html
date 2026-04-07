@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manage Menu | FoodFull</title>
+  <meta name="description" content="Vendor menu management preview for FoodFull." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="./index.html">FoodFull</a>
+      <nav class="site-nav">
+        <a href="#menuManager">Menu Items</a>
+        <a href="#menuFormCard">Add Item</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="button button-outline button-small" href="./index.html">Back to Site</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero manage-hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">Vendor workspace</p>
+        <h1>Manage Menu</h1>
+        <p class="hero-copy">
+          Review current featured items and preview the menu form layout in a fully static version of the page.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-gap manage-section">
+      <div class="container manage-layout">
+        <section id="menuManager" class="card-panel manage-list-panel">
+          <div class="manage-header">
+            <div>
+              <p class="eyebrow">Current menu</p>
+              <h2>Vendor items</h2>
+            </div>
+            <span class="tag">Demo menus</span>
+          </div>
+
+          <div class="manage-menu-grid">
+            <article class="manage-item-card">
+              <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=500&q=80" alt="Breakfast sandwich">
+              <div class="manage-item-body">
+                <span class="tag">Breakfast</span>
+                <h3>Breakfast Sandwich</h3>
+                <p>Eggs, cheddar, and crispy turkey bacon on brioche.</p>
+                <div class="manage-item-meta">
+                  <strong>$6.50</strong>
+                  <span>Featured</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="manage-item-card">
+              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500&q=80" alt="Chicken harvest bowl">
+              <div class="manage-item-body">
+                <span class="tag">Lunch</span>
+                <h3>Chicken Harvest Bowl</h3>
+                <p>Grilled chicken, quinoa, roasted vegetables, and herb dressing.</p>
+                <div class="manage-item-meta">
+                  <strong>$9.95</strong>
+                  <span>Popular</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="manage-item-card">
+              <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=80" alt="Margherita flatbread">
+              <div class="manage-item-body">
+                <span class="tag">Dinner</span>
+                <h3>Margherita Flatbread</h3>
+                <p>Stone-baked flatbread with basil, mozzarella, and tomato sauce.</p>
+                <div class="manage-item-meta">
+                  <strong>$11.25</strong>
+                  <span>Evening special</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="menuFormCard" class="card-panel manage-form-panel">
+          <p class="eyebrow">Edit details</p>
+          <h2>Add Menu Item</h2>
+          <form class="checkout-form">
+            <label>
+              <span>Item Name</span>
+              <input type="text" required placeholder="Meal name" />
+            </label>
+            <label>
+              <span>Category</span>
+              <select required>
+                <option>Breakfast</option>
+                <option>Lunch</option>
+                <option>Dinner</option>
+                <option>Snacks</option>
+                <option>Drinks</option>
+              </select>
+            </label>
+            <label>
+              <span>Price</span>
+              <input type="number" min="0" step="0.01" required placeholder="0.00" />
+            </label>
+            <label>
+              <span>Description</span>
+              <textarea rows="5" required placeholder="Describe the item"></textarea>
+            </label>
+            <label>
+              <span>Image URL</span>
+              <input type="url" placeholder="https://example.com/meal.jpg" />
+            </label>
+            <div class="image-preview-wrap">
+              <img class="image-preview" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80" alt="Sample menu preview" />
+            </div>
+            <div class="manage-form-actions">
+              <button type="submit" class="button">Save Item</button>
+              <button type="reset" class="button button-outline">Clear Form</button>
+            </div>
+          </form>
+          <!-- I need to build save functionality -->
+          <p class="status-message"> The Menu edits are not saved yet. just a demo</p>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

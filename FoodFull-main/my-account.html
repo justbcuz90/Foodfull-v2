@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Account | FoodFull</title>
+  <meta name="description" content="Student meal plan balance and purchase history for FoodFull." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="./index.html">FoodFull</a>
+      <nav class="site-nav">
+        <a href="#accountOverview">Overview</a>
+        <a href="#orderStatus">Track Order</a>
+        <a href="#purchaseHistory">History</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="button button-outline button-small" href="./index.html">Back to Menu</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero account-hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">Student portal</p>
+        <h1>My Account</h1>
+        <p class="hero-copy">Track meal plan balance, order progress, and recent purchases in one place.</p>
+      </div>
+    </section>
+
+    <section id="accountOverview" class="section-gap account-section">
+      <div class="container account-grid">
+        <section class="card-panel account-balance-card">
+          <p class="eyebrow">Meal plan</p>
+          <h2>Available balance</h2>
+          <p class="balance-amount">$50.00</p>
+          <p class="balance-note">Demo balance shown as part of the static account overview.</p>
+        </section>
+
+        <section class="card-panel account-summary-card">
+          <p class="eyebrow">Student details</p>
+          <h2>Student</h2>
+          <div class="status-summary-row">
+            <span>Email</span>
+            <strong>student@foodfull.com</strong>
+          </div>
+          <div class="status-summary-row">
+            <span>Total purchases</span>
+            <strong>4</strong>
+          </div>
+          <div class="status-summary-row">
+            <span>Most recent total</span>
+            <strong>$15.89</strong>
+          </div>
+        </section>
+
+        <section class="card-panel deposit-card">
+          <p class="eyebrow">Add funds</p>
+          <h2>Make a deposit</h2>
+          <form class="deposit-form">
+            <div class="deposit-options">
+              <label class="deposit-option">
+                <input type="radio" name="depositAmount" value="10" checked />
+                <span>$10</span>
+              </label>
+              <label class="deposit-option">
+                <input type="radio" name="depositAmount" value="25" />
+                <span>$25</span>
+              </label>
+              <label class="deposit-option">
+                <input type="radio" name="depositAmount" value="50" />
+                <span>$50</span>
+              </label>
+              <label class="deposit-option">
+                <input type="radio" name="depositAmount" value="100" />
+                <span>$100</span>
+              </label>
+            </div>
+            <button type="submit" class="button">Complete Deposit</button>
+          </form>
+          <p class="status-message">Static preview only. Deposit actions are not connected.</p>
+        </section>
+      </div>
+    </section>
+
+    <section id="orderStatus" class="section-gap account-section">
+      <div class="container">
+        <div class="section-heading center">
+          <p class="eyebrow">Order progress</p>
+          <h2>Track your order</h2>
+          <p>Current sample order: one bowl and one iced coffee scheduled for main-entry pickup.</p>
+        </div>
+
+        <div class="status-board">
+          <div class="status-steps">
+            <article class="status-step is-complete">
+              <span class="status-step-number">1</span>
+              <h3>Pending</h3>
+              <p>We received your order and started preparation.</p>
+            </article>
+            <article class="status-step is-current">
+              <span class="status-step-number">2</span>
+              <h3>Ready</h3>
+              <p>Your meal is packed and ready for pickup.</p>
+            </article>
+            <article class="status-step is-upcoming">
+              <span class="status-step-number">3</span>
+              <h3>Completed</h3>
+              <p>Your order will be marked complete after pickup.</p>
+            </article>
+          </div>
+
+          <div class="card-panel status-summary">
+            <p class="eyebrow">Latest order</p>
+            <h3>Ready for pickup</h3>
+            <div class="status-summary-row">
+              <span>Name</span>
+              <strong>Student</strong>
+            </div>
+            <div class="status-summary-row">
+              <span>Pickup</span>
+              <strong>Main entry</strong>
+            </div>
+            <div class="status-summary-row">
+              <span>Items</span>
+              <strong>2</strong>
+            </div>
+            <div class="status-summary-row">
+              <span>Total</span>
+              <strong>$15.89</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="purchaseHistory" class="section-gap account-section">
+      <div class="container">
+        <div class="section-heading center">
+          <p class="eyebrow">Purchase history</p>
+          <h2>Recent orders</h2>
+          <p>Sample purchase cards are shown below as part of the static account design.</p>
+        </div>
+        <div class="purchase-history-list">
+          <details class="purchase-card" open>
+            <summary class="purchase-card-header">
+              <div>
+                <span class="tag">April 7</span>
+                <h3>Lunch Pickup</h3>
+              </div>
+              <strong>$15.89</strong>
+            </summary>
+            <div class="receipt-meta">
+              <span>Main entry</span>
+              <span>2 items</span>
+              <span>Meal plan used</span>
+            </div>
+            <div class="receipt-sheet">
+              <div class="receipt-lines">
+                <div class="receipt-line">
+                  <div>
+                    <strong>Chicken Harvest Bowl</strong>
+                    <p>Fresh lunch bowl with grilled chicken and roasted vegetables.</p>
+                  </div>
+                  <span>$9.95</span>
+                </div>
+                <div class="receipt-line">
+                  <div>
+                    <strong>Vanilla Iced Coffee</strong>
+                    <p>Cold brew with vanilla cream.</p>
+                  </div>
+                  <span>$3.95</span>
+                </div>
+              </div>
+              <div class="receipt-summary">
+                <div class="receipt-total-row">
+                  <span>Subtotal</span>
+                  <strong>$13.90</strong>
+                </div>
+                <div class="receipt-total-row">
+                  <span>Service fee</span>
+                  <strong>$1.99</strong>
+                </div>
+                <div class="receipt-total-row grand-total">
+                  <span>Total</span>
+                  <strong>$15.89</strong>
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
